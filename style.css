@@ -1,0 +1,679 @@
+/*index*/
+
+.index { 
+  font-family: 'Pattaya', sans-serif; 
+  position: relative;
+    
+}
+
+
+/*Responsive celular*/
+
+@media  (max-width: 600px) {
+  .index{
+    background-image: url("./FOTOS/FONDO.jpeg");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Pattaya', sans-serif; 
+    position: relative;      
+}   
+.FOOTER {
+  position: relative;
+  font-family: 'Pattaya', sans-serif; 
+  text-align: center;
+  top: 400px;
+  color: #fff;
+}
+
+}
+/*Responsive Tablet*/
+
+@media (min-width: 768px) {
+  .index {
+  background-image: url("./FOTOS/FONDO.jpeg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: 'Pattaya', sans-serif; 
+  position: relative;
+}  
+
+.FOOTER {
+  position: relative;
+  font-family: 'Pattaya', sans-serif; 
+  text-align: center;
+  top: 700px;
+  color: #fff;
+}
+
+}
+/*Responsive Web*/
+
+@media (min-width: 1024px) {
+  .FONDO {
+  /*background-image: url("./FOTOS/FONDO.jpeg");*/
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: 'Pattaya', sans-serif; 
+  position: relative;
+}   
+
+}
+
+/* Barra de navegacion*/
+
+header {
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+#btn-menu {
+  display: none;
+}
+
+header label {
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  border-right:  1px solid #fff;
+  
+} 
+
+header label:hover {
+  cursor: pointer;
+  background: rgba(0,0,0,0.3);
+} 
+
+.menu ul:hover {
+  background: rgba(0,0,0,0.3);
+
+}
+ 
+
+.menu ul {
+  margin: 0px;
+  list-style: none;
+  padding: 0px;
+  display: flex;
+}
+
+.menu li {
+  flex-grow: 1; 
+  
+}
+
+.menu li :hover{
+  background: rgba(0,0,0,0.3);
+  border-right: 1px solid #fff;
+
+}
+
+.menu li a {
+  display: block;
+  padding: 15px 20px;
+  color : #fff;
+  text-decoration: none; 
+}
+
+@media (max-width :768px) {
+  header label {
+    display: block;
+  }
+
+  .menu {
+    position:absolute;
+    background: rgba(0,0,0,0.5);
+    width: 70%;
+    margin-left: -70%;
+    transition: all 0.5s;
+  }
+
+  .menu ul {
+    flex-direction: column;      
+  }
+  
+  
+  .menu li{
+    border-top: 1px solid #fff;
+  }
+
+  #btn-menu:checked ~ .menu {
+   margin: 0;
+
+  }
+}
+
+/*Estilos de la galeria "Paisajes" */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Slabo 27px', serif;
+}
+ 
+/*Clases*/
+
+.gallery-containerP { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px ,1fr));
+  grid-auto-rows: 200px;
+  gap: 3px;
+  grid-auto-flow: dense; 
+  border-radius: 3%; 
+  background-color: #fff;
+  
+} 
+
+.PAISAJES {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 1px;
+  border-radius: 2%;  
+  transition: 1s;
+  opacity: 0.8;
+ 
+} 
+
+.PAISAJES:hover{
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.gallery__itemP{
+  position: relative;
+}
+.gallery__titleP{
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: linear-gradient(rgba(255 ,255,255,0));
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  font-size: 10px;
+  font-family: 'Slabo 27px', serif; 
+  text-align: center;
+  
+}
+
+/*Responsive celular*/
+
+@media (min-width :600px){
+.gallery-containerP{
+  grid-template-columns: repeat(auto-fill, minmax(2000px ,1fr));
+  grid-auto-rows: 1500px;
+  font-family: 'Slabo 27px', serif; 
+}
+ 
+/*Posicionamiento de imagenes*/
+
+.itemP2{
+  grid-column-start: span 2;
+  
+}
+
+.itemP6{
+  grid-row-start: span 2;
+  
+}
+
+.itemP4{
+  grid-row-start: span 2;
+} 
+
+
+}
+/*Responsive Web*/
+
+@media (min-width :768px){
+  .gallery-containerP{
+    grid-template-columns: repeat(3 ,1fr);
+    grid-auto-rows: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .gallery__titleP{
+    font-size: 20px;
+    font-family: 'Slabo 27px', serif;
+  }
+
+}  
+
+
+/*Estilos de la galeria "random" */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Slabo 27px', serif;
+}
+ 
+/*Clases*/
+
+.gallery-containerR { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px ,1fr));
+  grid-auto-rows: 200px;
+  gap: 5px;
+  grid-auto-flow: dense; 
+  border-radius: 3%;
+  background-color: #fff;
+}
+
+.RANDOM {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 5px;
+  border-radius: 2%;  
+  transition: 1s;
+  opacity: 0.8;
+} 
+
+.RANDOM:hover{
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.gallery__itemR{
+  position: relative;
+}
+.gallery__titleR{
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: linear-gradient(rgba(255 ,255,255,0));
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  font-size: 10px;
+  font-family: 'Slabo 27px', serif; 
+  text-align: center;
+}
+
+/*Responsive celular*/
+
+@media (min-width :600px){
+.gallery-containerR{
+  grid-template-columns: repeat(auto-fill, minmax(2000px ,1fr));
+  grid-auto-rows: 1500px;
+  font-family: 'Slabo 27px', serif; 
+}
+
+/*Posicionamiento de imagenes*/
+
+.itemR3{
+  grid-column-end: span 2;
+}
+
+.itemR1{
+  grid-row-start: span 2;
+  
+}
+
+.itemR6{
+    grid-row-start: span 2;
+} 
+
+}
+/*Responsive Web*/
+
+@media (min-width :768px){
+  .gallery-containerR{
+    grid-template-columns: repeat(3 ,1fr);
+    grid-auto-rows: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .gallery__titleR{
+    font-size: 20px;
+    font-family: 'Slabo 27px', serif;
+  }
+} 
+
+
+/*Estilos de la galeria "Urbanismo" */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Slabo 27px', serif;
+}
+ 
+/*Clases*/
+
+.gallery-containerU { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px ,1fr));
+  grid-auto-rows: 200px;
+  gap: 3px;
+  grid-auto-flow: dense; 
+  border-radius: 3%;
+  background-color: #fff;
+  
+}
+
+.URBANISMO {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 1px;
+  border-radius: 2%;  
+  transition: 1s;
+  opacity: 0.8;
+} 
+
+.URBANISMO:hover{
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.gallery__itemU{
+  position: relative;
+}
+.gallery__titleU{
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: linear-gradient(rgba(255 ,255,255,0));
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  font-size: 10px;
+  font-family: 'Slabo 27px', serif; 
+  text-align: center;
+}
+
+/*Responsive celular*/
+
+@media (min-width :600px){
+.gallery-containerU{
+  grid-template-columns: repeat(auto-fill, minmax(2000px ,1fr));
+  grid-auto-rows: 1500px;
+  font-family: 'Slabo 27px', serif; 
+}
+
+/*Posicionamiento de imagenes*/
+
+.itemU7{
+  grid-row-start: span 2;
+  
+  
+}
+
+.itemU3{
+  grid-row-start: span 2;
+  
+}
+
+.itemU8{
+  grid-row-start: span 2;
+} 
+
+}
+/*Responsive Web*/
+
+@media (min-width :768px){
+  .gallery-containerU{
+    grid-template-columns: repeat(3 ,1fr);
+    grid-auto-rows: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .gallery__titleU{
+    font-size: 20px;
+    font-family: 'Slabo 27px', serif;
+  }
+}
+
+
+/*Estilos de la galeria "Gatos" */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Slabo 27px', serif;
+}
+ 
+/*Clases*/
+
+.gallery-containerG { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px ,1fr));
+  grid-auto-rows: 200px;
+  gap: 2px;
+  grid-auto-flow: dense; 
+  border-radius: 3%;
+  background-color: #fff;
+  
+}
+
+.GATOS {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 2px;
+  border-radius: 2%;  
+  transition: 1s;
+  opacity: 0.8;
+} 
+
+.GATOS:hover{
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.gallery__itemG{
+  position: relative;
+}
+.gallery__titleG{
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: linear-gradient(rgba(255 ,255,255,0));
+  width: 100%;
+  margin: 0;
+  padding: 2px;
+  font-size: 10px;
+  font-family: 'Slabo 27px', serif; 
+  text-align: center;
+}
+
+/*Responsive celular*/
+
+@media (min-width :600px){
+.gallery-containerG{
+  grid-template-columns: repeat(auto-fill, minmax(2000px ,1fr));
+  grid-auto-rows: 1500px;
+  font-family: 'Slabo 27px', serif; 
+}
+
+/*Posicionamiento de imagenes*/
+
+.itemG4{
+  grid-row-start: span 2;
+}
+
+.itemG5{
+  grid-row-start: span 2;
+  
+}
+
+.item{
+  grid-column-start: span 2;
+} 
+
+.itemG6{
+  grid-row-start: span 2;
+}
+}
+/*Responsive Web*/
+
+@media (min-width :768px){
+  .gallery-containerG{
+    grid-template-columns: repeat(3 ,1fr);
+    grid-auto-rows: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .gallery__titleG{
+    font-size: 20px;
+    font-family: 'Slabo 27px', serif;
+  }
+}  
+
+
+/*Estilos de la galeria "Naturaleza" */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Slabo 27px', serif;
+}
+ 
+/*Clases*/
+
+.gallery-containerN { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px ,1fr));
+  grid-auto-rows: 200px;
+  gap: 2px;
+  grid-auto-flow: dense; 
+  border-radius: 3%;
+  background-color: #fff;
+  
+}
+
+.NATURALEZA {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 2px;
+  border-radius: 2%;  
+  transition: 1s;
+  opacity: 0.8;
+} 
+
+.NATURALEZA:hover{
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.gallery__itemN{
+  position: relative;
+}
+.gallery__titleN{
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: linear-gradient(rgba(255 ,255,255,0));
+  width: 100%;
+  margin: 0;
+  padding: 2px;
+  font-size: 10px;
+  font-family: 'Slabo 27px', serif; 
+  text-align: center;
+}
+
+/*Responsive celular*/
+
+@media (min-width :600px){
+.gallery-containerN{
+  grid-template-columns: repeat(auto-fill, minmax(2000px ,1fr));
+  grid-auto-rows: 1500px;
+  font-family: 'Slabo 27px', serif; 
+ 
+}
+
+/*Posicionamiento de imagenes*/
+
+.itemN6{
+  grid-row-end: span 2;
+}
+
+.itemN2{
+  grid-row-start: span 2;
+  
+}
+
+.itemN4{
+  grid-row-start: span 2;
+} 
+
+
+}
+
+/*Responsive Web*/
+
+@media (min-width :768px){
+  .gallery-containerN{
+    grid-template-columns: repeat(3 ,1fr);
+    grid-auto-rows: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .gallery__titleN{
+    font-size: 20px;
+    font-family: 'Slabo 27px', serif;
+  }
+}  
+
+/*Estilo del Footer (INDEX)*/
+
+.FOOTER {
+  position: relative;
+  font-family: 'Pattaya', sans-serif; 
+  text-align: center;
+  top: 900px;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
